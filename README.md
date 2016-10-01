@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/academichero/jobs.svg?branch=master)](https://travis-ci.org/academichero/jobs)
+[![Coverage Status](https://coveralls.io/repos/github/academichero/jobs/badge.svg)](https://coveralls.io/github/academichero/jobs)
+
 # Academic Job Board
 O Job Board é uma plataforma online que permite o encontro perfeito entre a busca por vagas no mercado de trabalho e a busca por profissionais qualificados.
 
