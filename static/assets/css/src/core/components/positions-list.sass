@@ -1,0 +1,28 @@
+.positions-list
+  padding: 0
+  margin: 0
+
+  .item
+    border-left: 5px solid $default-blue-color
+    display: block
+    padding: 5px 15px
+    background: $grey-lighter
+    margin-bottom: 15px
+    position: relative
+
+    .title
+      padding: 0
+      margin: 0
+
+
+.positions-list
+  .item.-new
+    &::after
+      content: 'NEW'
+      color: #fff
+      background: #888
+      position: absolute
+      top: 0
+      right: 0
+      padding: 3px
+      font-size: 0.8em
