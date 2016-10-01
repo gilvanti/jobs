@@ -1,18 +1,41 @@
 {% extends 'layout.html' %}
 
 {% block content %}
-  <div class="board-header">
-    <header>
-      <h2 class="board-header-title">Últimas oportunidades cadastradas</h2>
-    </header>
+<div class="banner">
+  <div class="container">
+    <div class="content">
+      <h2 class="message">O que você procura?</h2>
+      <ul class="actions">
+        <li>
+          <a class="btn -featured" href="#job-list">Oportunidades</a>
+        </li>
+        <li>
+          <a class="btn -featured" href="#professionals">Profissionais</a>
+        </li>
+      </ul>
+    </div>
   </div>
-  <ul class="board-list">
-    {% for job in jobs %}
-      <li class="job-item {{job.featured|yesno:'featured,'}}">
-        <span class="title">{{job.title}}</span>
-        <p>{{job.description|truncatechars:140}}</p>
-        <span class="price">R$ {{job.salary_min}} à R$ {{job.salary_max}}</span>
+</div>
+
+<div class="job-list" id="job-list">
+  <div class="container">
+    <h2 class="container-title">Últimas vagas</h2>
+    <ul class="positions-list">
+      {% for job in jobs %}
+      <li class="item -new">
+        <div class="row">
+          <div class="col-xs-12 col-md-12">
+            <h3 class="title">{{job.title}}</h3>
+            <p><span class="glyphicon glyphicon-time"></span> {{job.workload}}h semanais</p>
+            <p>R$ {{job.salary_min}} à R$ {{job.salary_max}}</p>
+            <p>{{job.description|truncatechars:140}}</p>
+          </div>
+        </div>
       </li>
-    {% endfor %}
-  </ul>
+      {% empty %}
+        <div class="alert alert-info"> Não há vagas cadastradas</div>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
 {% endblock %}
